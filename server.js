@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const logToConsole = require('./middleware/logToConsole');
+const saveToFile = require('./middleware/saveToFile');
 
 const app = express();
 const PORT = process.env.PORT || 7890;
@@ -18,6 +19,7 @@ app.get('/', (req, res) => {
 
 app.post("/more", (req, res) => {
     logToConsole(req.body.details);
+    saveToFile(req.body.details);
     switch (req.body.details) {
         case "hone":
             vocXdata = require('./string.json')[0];
@@ -88,5 +90,3 @@ app.listen(PORT, function () {
 });
 
 
-// 10 skewed
-// 11 reprimand
