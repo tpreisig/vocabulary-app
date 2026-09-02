@@ -1,44 +1,16 @@
-# Switcher
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-1.0.0-orange)
+# EloquApp and VocabApp
+(...WIP)
 
+Two Vocabulary Apps implemented with Express.js and EJS as a demo for template scripting with EJS.\
+\
+Keep in mind that template scripting with EJS is prone to XSS attacks. EJS is not uniquely cursed, but it is a frequent XSS magnet in the wild. EJS does HTML-escape by default with `<%= value %>`. The trap is the nearly identical `<%- value %>` tag that dumps raw HTML which might be rather hard to spot in 400-line template.
 
-Application that displays details (like meaning and pronuciation of a word) in a widget.\
-Created with node, express, bodyParser and ejs.
+A 2018 study of real JavaScript apps found XSS in 43% of EJS projects versus 38% for Pug and only 12% for AngularJS.
 
+## EloquApp
 
-## Installation
+![screenshot](/EloquApp/assets/eloquApp.png)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/tpreisig/word-switch.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd word-switch
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
+## VocabApp
 
-## Usage
-
-To start the project, run:
-```bash
-npm start
-```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
-## Screenshots
-
-![Screenshot](screenshots/word-switch.png)
-
-## Contact
-
-Maintained by tpreisig - feel free to reach out!
+![screenshot](/VocabApp/assets/vocabApp.png)
