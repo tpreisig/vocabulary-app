@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+body {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-image:
+        linear-gradient(to right, cornflowerblue 2px, transparent 2px),
+        linear-gradient(to top, cornflowerblue 2px, transparent 2px);
+    background-size: 120px 120px;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 30px 42px;
+    margin-bottom: 30px;
+    background: radial-gradient(skyblue, cornflowerblue);
+    border-radius: 9px;
+}
+
+.container>button {
+    padding: 4px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+}
+
+.container>button:hover {
+    border-color: navy;
+}
+
+.display {
+    padding: 20px 32px;
+    min-height: 340px;
+    box-shadow:
+        inset 2px 1px 8px rgba(0, 0, 0, 0.1),
+        inset -1px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    line-height: 2.4;
+
+}
+
+.display h2 {
+    color: cornflowerblue;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.display ul {
+    list-style-type: none;
+
+}
+
+.display ul>li {
+    color: darkslateblue;
+    line-height: 20px;
+    padding-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
