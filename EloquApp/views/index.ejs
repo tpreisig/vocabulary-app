@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form class="container" action="/more" method="POST">
+        <button type="submit" value="beneficence" name="details">beneficence</button>
+        <button type="submit" value="concession" name="details">concession</button>
+        <button type="submit" value="obscuration" name="details">obscuration</button>
+        <button type="submit" value="consecutive" name="details">consecutive</button>
+        <button type="submit" value="succeed" name="details">succeed</button>
+        <button type="submit" value="deduction" name="details">deduction</button>
+        <button type="submit" value="adulate" name="details">adulate</button>
+        <button type="submit" value="inaugural" name="details">inaugural</button>
+        <button type="submit" value="yield" name="details">yield</button>
+        <button type="submit" value="commotion" name="details">commotion</button>
+        <button type="submit" value="curtail" name="details">curtail</button>
+        <button type="submit" value="disclosure" name="details">disclosure</button>
+        <button type="submit" value="dissent" name="details">dissent</button>
+        <button type="submit" value="spry" name="details">spry</button>
+    </form>
+    <div class="display">
+        <% if(locals.voc) {%>
+        <h2><%= voc.word  %></h2>
+        <ul>
+            <li>Pronunciation: <%= voc.pronunciation  %></li>
+            <li>Meaning: <%= voc.meaning  %></li>
+            <li>Example 1: <%= voc.sentence_1 %></li>
+            <li>Example 2: <%= voc.sentence_2 %></li>
+        </ul>
+        <%} else {%>
+        <p >Click on a word above to see its meaning and pronunciation</p>
+        <% } %>
+    </div>
+</body>
+</html>
