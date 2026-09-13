@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vocabulary explorer</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>Vocabulary explorer</h1>
+
+      <% if (vocX) { %>
+        <h2><%= vocX.word %></h2>
+        <p class="definition"><%= vocX.definition %></p>
+        <p class="example"><em><%= vocX.example %></em></p>
+      <% } else { %>
+        <p>No vocabulary loaded.</p>
+      <% } %>
+
+      <form action="/more" method="post">
+        <label for="details">Choose another word</label>
+        <select id="details" name="details">
+          <% words.forEach((item) => { %>
+            <option
+              value="<%= item.id %>"
+              <%= vocX && vocX.id === item.id ? "selected" : "" %>
+            >
+              <%= item.word %>
+            </option>
+          <% }) %>
+        </select>
+        <button type="submit">Show details</button>
+      </form>
+    </main>
+  </body>
+</html>

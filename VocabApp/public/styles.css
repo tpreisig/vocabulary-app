@@ -1,0 +1,65 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #102a43;
+  background: #f0f4f8;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: min(36rem, calc(100% - 2rem));
+  background: #fff;
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+}
+.card:hover{
+  box-shadow: none;
+  border: 2px solid #627d98;
+}
+
+h1 {
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #627d98;
+}
+
+h2 {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 2rem;
+}
+
+.definition {
+  font-size: 1.05rem;
+}
+
+.example {
+  color: #486581;
+}
+
+form {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+select,
+button {
+  font: inherit;
+  padding: 0.55rem 0.7rem;
+}
+
+button {
+  cursor: pointer;
+  background: #243b53;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+}
